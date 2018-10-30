@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SendingMail.EmailActivity">
+
+
+    <TextView
+        android:id="@+id/tv_mail_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FROM : "/>
+
+    <EditText
+        android:id="@+id/et_mail_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_mail_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO : "/>
+    <EditText
+        android:id="@+id/et_mail_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_mail_cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CC : "/>
+    <EditText
+        android:id="@+id/et_mail_cc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_mail_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBJECT : "/>
+    <EditText
+        android:id="@+id/et_mail_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_mail_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPOSE MAIL : "/>
+
+    <EditText
+        android:id="@+id/et_mail_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/btn_attachment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ATTACHMENT" />
+
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="SEND" />
+
+
+</LinearLayout>

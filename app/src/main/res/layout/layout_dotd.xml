@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_title_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_description_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_url_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_url1_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_resolutionType1_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_url2_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_resolutionType2_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_url3_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_resolutionType3_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_url4_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_resolutionType4_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/tv_availability_dotd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+
+</LinearLayout>
