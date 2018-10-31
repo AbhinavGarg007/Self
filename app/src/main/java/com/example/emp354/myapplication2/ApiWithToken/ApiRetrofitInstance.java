@@ -9,6 +9,10 @@ public class ApiRetrofitInstance {
 
    /* private static final String BASE_URL="https://www.googleapis.com/customsearch/";*/
 
+
+    //for product feed listing api
+    private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/api/";
+
     //for all offers
     /*private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/offers/v1/all/";*/
 
@@ -17,7 +21,14 @@ public class ApiRetrofitInstance {
 
 
     //for product feed
-    private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/feeds/mrabhinavgarg/category/";
+    /*private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/feeds/mrabhinavgarg/category/";*/
+
+
+    //to get category
+    /*private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/1.0/feeds/mrabhinavgarg/category/";*/
+
+    //for search query based
+   /* private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/1.0/search.json?query=sony+mobiles&resultCount=5";*/
 
 
     private static Retrofit retrofitImage;

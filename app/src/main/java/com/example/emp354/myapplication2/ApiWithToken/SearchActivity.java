@@ -1,6 +1,5 @@
 package com.example.emp354.myapplication2.ApiWithToken;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,9 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.emp354.myapplication2.ApiWithToken.POJOalloffers.AllOffersListModel;
 import com.example.emp354.myapplication2.ApiWithToken.POJOdotd.DModel;
-import com.example.emp354.myapplication2.ApiWithToken.POJOdotd.DataModel;
+import com.example.emp354.myapplication2.ApiWithToken.POJOProjectFeedListing.ProductFeedListingModel;
 import com.example.emp354.myapplication2.R;
 
 import java.util.ArrayList;
@@ -49,18 +47,33 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
     private void fetchData()
     {
         ApiDataService service=ApiRetrofitInstance.getApiRetrofitInstance().create(ApiDataService.class);
-        Call<AllOffersListModel> call=service.getAllData();
-        call.enqueue(new Callback<AllOffersListModel>() {
+        Call<ProductFeedListingModel> call=service.getAllData();
+        call.enqueue(new Callback<ProductFeedListingModel>() {
             @Override
-            public void onResponse(Call<AllOffersListModel> call, Response<AllOffersListModel> response) {
+            public void onResponse(Call<ProductFeedListingModel> call, Response<ProductFeedListingModel> response) {
                 if(response!=null) {
+                    Toast.makeText(SearchActivity.this,"Success",Toast.LENGTH_SHORT).show();
                     Log.d("response",response.raw().message());
-                    Log.d("response",String.valueOf(response.body().getAllOffersList().size()));
-                Intent intent=new Intent(SearchActivity.this,ResultActivity.class);
-                /*intent.putExtra("dotd",response.body());*/
-                  intent.putExtra("allOffers",response.body());
-                startActivity(intent);
+                    Log.d("response",String.valueOf(response.body().getTitle()));
+                    Log.d("response",String.valueOf(response.body().getDescription()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getName()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts().getAvailableVariants().getV010()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts().getAvailableVariants().getV110()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts().getAvailableVariants().getV110().getGet()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts().getAvailableVariants().getV110().getDeltaGet()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts().getAvailableVariants().getV110().getTop()));
+                    Log.d("response",String.valueOf(response.body().getApiGroups().getAffiliate().getApiListings().getBags_wallets_belts().getApiName()));
+
                 }
+
+                /*Intent intent=new Intent(SearchActivity.this,ResultActivity.class);
+                *//*intent.putExtra("dotd",response.body());*//*
+                  intent.putExtra("allOffers",response.body());
+                startActivity(intent);*/
+
                    /* dataModelList=response.body().getDotdList();
                     Toast.makeText(SearchActivity.this,"Success",Toast.LENGTH_SHORT).show();
                 Log.d("response",response.raw().message());
@@ -84,7 +97,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
             }
 
             @Override
-            public void onFailure(Call<AllOffersListModel> call, Throwable t) {
+            public void onFailure(Call<ProductFeedListingModel> call, Throwable t) {
 
                 Toast.makeText(SearchActivity.this,"Failure",Toast.LENGTH_SHORT).show();
             }
