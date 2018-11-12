@@ -1,5 +1,8 @@
 package com.example.emp354.myapplication2.ApiWithToken.POJOFeedDownloadListing;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class WomensFootwear {
     @SerializedName("availableVariants")
     @Expose

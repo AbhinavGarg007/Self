@@ -11,10 +11,10 @@ public class ApiRetrofitInstance {
 
 
     //for product feed listing api
-    private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/api/";
+   /* private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/api/";*/
 
     //for all offers
-    /*private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/offers/v1/all/";*/
+    private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/offers/v1/all/";
 
     //for dotd
     /*private static final String BASE_URL="https://affiliate-api.flipkart.net/affiliate/offers/v1/dotd/";*/
